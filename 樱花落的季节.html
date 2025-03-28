@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>樱花落的季节</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #fff9f9;
+            color: #5a3e3e;
+            background-image: url('https://example.com/sakura-bg.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: -1;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: rgba(255, 228, 228, 0.8);
+            border-bottom: 1px solid #ffb6c1;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            color: #d35d6e;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8e6e6e;
+            font-style: italic;
+        }
+        
+        nav {
+            background-color: rgba(255, 228, 228, 0.9);
+            padding: 15px 0;
+            text-align: center;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 20px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #d35d6e;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #a74b5a;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .main-content {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .sidebar {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        h2 {
+            color: #d35d6e;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ffb6c1;
+        }
+        
+        .featured-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            display: inline-block;
+            background-color: #d35d6e;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .read-more:hover {
+            background-color: #a74b5a;
+        }
+        
+        .sidebar-item {
+            margin-bottom: 25px;
+        }
+        
+        .sidebar-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 228, 228, 0.9);
+            color: #8e6e6e;
+            border-top: 1px solid #ffb6c1;
+        }
+        
+        .sakura-petal {
+            position: absolute;
+            background-image: url('https://example.com/sakura-petal.png');
+            background-size: contain;
+            width: 25px;
+            height: 25px;
+            opacity: 0.7;
+            z-index: -1;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>樱花落的季节</h1>
+        <p class="subtitle">花开花落终有时，相逢相聚本无意</p >
+    </header>
+    
+    <nav>
+        <ul>
+            <li>首页</li>
+            <li>樱花物语</li>
+            <li>赏樱指南</li>
+            <li>摄影作品</li>
+            <li>关于我们</li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <main class="main-content">
+            <h2>欢迎来到樱花的世界</h2>
+            <p><img src="2.jpg" alt="" width="1200" height="800" class="read-more"/></p>
+            <p>樱花，是蔷薇科樱属植物的花朵，在日本文化中具有特殊意义。樱花花期短暂，盛开时绚烂无比，凋零时又迅速而决绝，这种特性被日本人视为生命无常的象征。</p >
+            <p>每年春季，当樱花盛开时，日本人会举行"花见"（赏花）活动，亲朋好友聚在樱花树下，一边欣赏樱花一边饮酒作乐。这种习俗可以追溯到平安时代（794-1185年），最初是贵族的活动，后来逐渐普及到民间。</p >
+            <p>樱花的花语是"生命的美丽与短暂"，它提醒我们珍惜当下，因为美好的事物往往转瞬即逝。在日本，樱花还象征着新的开始，因为樱花盛开的时间与日本的新学年和财政年度开始的时间重合。</p >
+            阅读更多
+        </main>
+        
+        <aside class="sidebar">
+            <div class="sidebar-item">
+                <h2>樱花花期预报</h2>
+                <p>2023年日本主要城市樱花预计开放时间：</p >
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>东京：3月20日左右</li>
+                    <li>京都：3月27日左右</li>
+                    <li>大阪：3月26日左右</li>
+                    <li>北海道：4月底至5月初</li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-item">
+                <h2>热门赏樱地点</h2>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>东京 - 上野公园</li>
+                    <li>京都 - 哲学之道</li>
+                    <li>大阪 - 大阪城公园</li>
+                    <li>奈良 - 吉野山</li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-item">
+                <h2>樱花品种</h2>
+                <p>日本有超过200种樱花，最常见的是染井吉野樱（Somei Yoshino），其他品种包括：</p >
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>山樱（Yamazakura）</li>
+                    <li>八重樱（Yaezakura）</li>
+                    <li>枝垂樱（Shidarezakura）</li>
+                    <li>寒绯樱（Kanzakura）</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    
+    <footer>
+        <p>© 2023 樱花落的季节 | 设计与内容版权所有</p >
+        <p>联系我们：info@sakura-season.com</p >
+    </footer>
+    
+    <script>
+        // 创建樱花花瓣飘落效果
+        function createSakuraPetals() {
+            const body = document.body;
+            const petalCount = 15;
+            
+            for (let i = 0; i < petalCount; i++) {
+                const petal = document.createElement('div');
+                petal.classList.add('sakura-petal');
+                
+                // 随机位置
+                const startLeft = Math.random() * window.innerWidth;
+                const endLeft = startLeft + (Math.random() * 200 - 100);
+                
+                // 随机大小
+                const size = 15 + Math.random() * 20;
+                petal.style.width = `${size}px`;
+                petal.style.height = `${size}px`;
+                
+                // 随机透明度
+                petal.style.opacity = 0.5 + Math.random() * 0.5;
+                
+                // 随机旋转
+                petal.style.transform = `rotate(${Math.random() * 360}deg)`;
+                
+                // 随机下落时间
+                const duration = 10 + Math.random() * 20;
+                
+                // 设置动画
+                petal.style.left = `${startLeft}px`;
+                petal.style.top = '-30px';
+                petal.style.position = 'fixed';
+                petal.style.animation = `fall ${duration}s linear infinite`;
+                
+                // 创建关键帧
+                const keyframes = `
+                    @keyframes fall {
+                        to {
+                            top: ${window.innerHeight}px;
+                            left: ${endLeft}px;
+                            opacity: 0;
+                            transform: rotate(${360 + Math.random() * 360}deg);
+                        }
+                    }
+                `;
+                
+                // 添加样式
+                const style = document.createElement('style');
+                style.innerHTML = keyframes;
+                document.head.appendChild(style);
+                
+                body.appendChild(petal);
+            }
+        }
+        
+        // 页面加载完成后创建花瓣
+        window.addEventListener('load', createSakuraPetals);
+    </script>
+</body>
+</html>
